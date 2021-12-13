@@ -1,5 +1,5 @@
 import Journal from './journal.js';
-
+import './css/styles.css';
 
 $(document).ready(function() {
   $('#text-form').submit(function(event) {
