@@ -1,0 +1,13 @@
+import Journal from './journal.js';
+
+
+$(document).ready(function() {
+  $('#text-form').submit(function(event) {
+    event.preventDefault();
+    const title = $("#title").val();
+    const textArray = $('#text').val().split(" ");
+    const newJournal = new Journal(textArray, title)
+    const numberOfWords = newJournal.numberWords();
+    $('#response').html(numberOfWords);
+  });
+});
